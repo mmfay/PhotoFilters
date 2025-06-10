@@ -1,15 +1,16 @@
-All Functionality of FayFilters work. Used Homework3 as base.
+# PhotoFilters
 
-Once Navigated to the folder, 
+## To Compile
 
 Run the following command to compile
 
 gcc FayFilters.c BmpProcessor.c PixelProcessor.c -lm -pthread -o reader
 
-after that, enter the following command to run the program. Make sure Images are in the same 
-folder as the program.
+## To Run
 
-./reader -i test3.bmp -o test3out.bmp -f c
+Run the following command to run
+
+./reader -i photos/test3.bmp -o test3out.bmp -f c
 
 -i is the input file, 
 -o is the name of the output file. Make sure to have .bmp at the end. 
