@@ -25,8 +25,9 @@ Program will exit if THREAD_COUNT is greater than Image Width.
 
 ## Example
 
-Test file located in photos/
 ![Test Image](photos/readme/readme_original.png)
 
+![Test Image](photos/readme/readme_blur.png)
 
+![Test Image](photos/readme/readme_swissCheese.png)
 
