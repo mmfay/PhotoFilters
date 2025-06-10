@@ -5,11 +5,12 @@
 *
 * Completion time: 11h (Total Project)
 *
-* @author Matthew Fay used Matthew Fay HW3 as Base File.
-* @version 1.0
+* @author Matthew Fay
+* @version 1.1
 */
 //////////////////////
 ///INCLUDES
+//////////////////////
 #include <stdlib.h>
 #include <stdio.h>
 #include <getopt.h>
@@ -22,16 +23,19 @@
 
 //////////////////////
 ///MACROS
+//////////////////////
 #define THREAD_COUNT 150
 
 //////////////////////
 ///GLOBAL VARIABLES
+//////////////////////
 char* bmpExt = ".bmp";
 char* cheeseCheck;
 char* blurCheck;
 
 //////////////////////
 ///FORWARD DECLARATIONS
+//////////////////////
 void startBMPThreadBlur(FILE* file_i, FILE* file_o, int threadCount);
 void startBMPThreadSwissCheese(FILE* file_i, FILE* file_o, int threadCount);
 int getHoleCount(int ImageWidth, int ImageHeight);
@@ -39,6 +43,7 @@ int getAvgRadius(int ImageWidth, int ImageHeight);
 
 //////////////////////
 ///FUNCTIONS
+//////////////////////
 void startBMPThreadBlur(FILE* file_i, FILE* file_o, int threadCount){
     
     //Create BMP Header struct, allocate memory.
@@ -125,6 +130,7 @@ void startBMPThreadBlur(FILE* file_i, FILE* file_o, int threadCount){
     BMPHeaderDestructor(&header_BMP);
     DIBHeaderDestructor(&header_DIB);
 }
+
 /**
  * Description: BMP is Process for converting BMP file to BMP.
  * @param file_i passes file to read from.
@@ -133,7 +139,6 @@ void startBMPThreadBlur(FILE* file_i, FILE* file_o, int threadCount){
  * @param gShift user specified green color pixel shift.
  * @param bShift user specified blue color pixel shift.
  */
-
 void startBMPThreadSwissCheese(FILE* file_i, FILE* file_o, int threadCount){
     
     //Create BMP Header struct, allocate memory.
@@ -147,9 +152,6 @@ void startBMPThreadSwissCheese(FILE* file_i, FILE* file_o, int threadCount){
     //Create Pixel struct, allocate Memory.
     struct Pixel** pixel = malloc(sizeof(struct Pixel*) * header_DIB->ImageHeight);
     readPixelsBMP(file_i, pixel, header_DIB->ImageWidth, header_DIB->ImageHeight);
-    
-    //Apply Color Shift. Testing.
-    //colorShiftPixels(pixel, header_DIB->ImageWidth, header_DIB->ImageHeight, 10, 10, 0);
     
     //gather and create hole info.
     int holeNum = getHoleCount(header_DIB->ImageWidth, header_DIB->ImageHeight);
