@@ -10,7 +10,7 @@ gcc FayFilters.c BmpProcessor.c PixelProcessor.c -lm -pthread -o reader
 
 Run the following command to run
 
-./reader -i photos/test3.bmp -o test3out.bmp -f c
+./reader -i photos/test.bmp -o test3out.bmp -f c
 
 ## Parameter Definitions
 
@@ -22,6 +22,11 @@ Run the following command to run
 
 Thread Count Defined under macro THREAD_COUNT (line 25 of Fay Filters) per instructions.
 Program will exit if THREAD_COUNT is greater than Image Width.
+
+## Example
+
+Test file located in photos/
+![Test Image](photos/readme/readme_original.png)
 
 
 
