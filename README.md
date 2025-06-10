@@ -25,9 +25,10 @@ Program will exit if THREAD_COUNT is greater than Image Width.
 
 ## Example
 
+### Original
 ![Test Image](photos/readme/readme_original.png)
-
+### Blur
 ![Test Image](photos/readme/readme_blur.png)
-
+### Swiss Cheese
 ![Test Image](photos/readme/readme_swissCheese.png)
 
